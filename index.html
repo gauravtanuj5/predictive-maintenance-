@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PredictAI - Smart Predictive Maintenance</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Gradient Background */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(-45deg,#0f172a,#1e293b,#0ea5e9,#1e293b);
+    background-size:400% 400%;
+    animation:gradientBG 10s ease infinite;
+    padding:0 20px;
+}
+
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.hero h1{
+    font-size:48px;
+    animation:fadeDown 1.2s ease forwards;
+}
+
+.hero p{
+    max-width:700px;
+    margin:20px 0;
+    color:#cbd5e1;
+    animation:fadeUp 1.5s ease forwards;
+}
+
+@keyframes fadeDown{
+    from{opacity:0;transform:translateY(-40px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(40px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+header{
+    position:fixed;
+    width:100%;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:0.3s;
+    z-index:1000;
+}
+
+header.scrolled{
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+}
+
+header h2{
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.btn{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:6px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.btn-primary{
+    background:#38bdf8;
+    color:#000;
+}
+
+.btn-primary:hover{
+    box-shadow:0 0 20px #38bdf8;
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.btn-outline:hover{
+    background:#38bdf8;
+    color:black;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:32px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:12px;
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    background:#334155;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* Reveal Animation */
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+    transition:1s ease;
+}
+
+footer{
+    background:#0f172a;
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #334155;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:6px;
+    border:none;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:32px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header id="navbar">
+    <h2>PredictAI</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#how">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>AI-Powered Predictive Maintenance</h1>
+    <p>Prevent breakdowns before they happen using IoT sensors, AI algorithms, and real-time machine monitoring.</p>
+    <div>
+        <button class="btn btn-primary">Request Demo</button>
+        <button class="btn btn-outline">Learn More</button>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About</h2>
+    <div class="grid">
+        <div class="card reveal"><h3>Smart Monitoring</h3><p>Real-time IoT sensor tracking.</p></div>
+        <div class="card reveal"><h3>AI Analytics</h3><p>Failure prediction using ML models.</p></div>
+        <div class="card reveal"><h3>Cost Reduction</h3><p>Minimize downtime and expenses.</p></div>
+    </div>
+</section>
+
+<section id="how">
+    <h2 class="section-title">How It Works</h2>
+    <div class="grid">
+        <div class="card reveal"><h3>1. Data Collection</h3></div>
+        <div class="card reveal"><h3>2. Processing</h3></div>
+        <div class="card reveal"><h3>3. AI Prediction</h3></div>
+        <div class="card reveal"><h3>4. Smart Alerts</h3></div>
+    </div>
+</section>
+
+<section id="features">
+    <h2 class="section-title">Features</h2>
+    <div class="grid">
+        <div class="card reveal"><h3>Real-Time Monitoring</h3></div>
+        <div class="card reveal"><h3>RUL Estimation</h3></div>
+        <div class="card reveal"><h3>Anomaly Detection</h3></div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Message" required></textarea>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 PredictAI. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+/* Navbar scroll effect */
+window.addEventListener("scroll", function(){
+    document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
+});
+
+/* Scroll Reveal Animation */
+function reveal(){
+    var reveals = document.querySelectorAll(".reveal");
+    for(var i=0; i<reveals.length; i++){
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 100;
+        if(elementTop < windowHeight - elementVisible){
+            reveals[i].classList.add("active");
+        }
+    }
+}
+window.addEventListener("scroll", reveal);
+
+/* Form */
+document.querySelector("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Thank you! We will contact you soon.");
+});
+
+</script>
+
+</body>
+</html>
